@@ -7,7 +7,6 @@ import java.util.Scanner;
 * @author Keval Parmar
 * @version 1.3 2022-01-25
 */
-
 public class Month { 
 
 	public static void main(String[] args) {

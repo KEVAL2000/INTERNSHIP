@@ -5,7 +5,6 @@ package com.java.keval;
 * @author Keval Parmar
 * @version 1.3 2022-01-25
 */
-
 public class ConstructorExample {
 
 	public ConstructorExample () {
@@ -20,7 +19,7 @@ public class ConstructorExample {
 
 	public static void main(String[] args) {
 		new ConstructorExample();
-		new ConstructorExample(10,10);
+		new ConstructorExample(10, 10);
 	}
 
 }

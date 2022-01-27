@@ -5,7 +5,6 @@ package com.java.keval;
 * @author Keval Parmar
 * @version 1.3 2022-01-25
 */
-
 public class PrintNumber {
 
 	public static void main(String[] args) {

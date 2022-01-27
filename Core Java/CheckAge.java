@@ -6,14 +6,13 @@ package com.java.keval;
 * @author Keval Parmar
 * @version 1.3 2022-01-25
 */
-
 public class CheckAge {
 
 	public static void main(String[] args) {
-		final int EIGHTEEN = 18; // Declare constant variable
+		final int eighteen = 18; // Declare constant variable
 		int age = 20; // Declare age variable
 
-		if (age >= EIGHTEEN) { // Check condition
+		if (age >= eighteen) { // Check condition
 			System.out.println("You are eligible for voting");
 		} else {
 			System.out.println("Sorry! You are not eligible for voting");

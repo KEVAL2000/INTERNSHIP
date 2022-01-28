@@ -11,11 +11,11 @@ import java.util.Iterator;
 public class AddList {
 
 	public static void main (String[] args) {
-		ArrayList<String> list = new ArrayList<String>(); // Create object of list
-		list.add("Hello"); // Add "Hello"
-		list.add("World"); // Add "World"
-		list.add("Keval"); // Add "Keval"
-		Iterator<String> iterate = list.iterator(); // Print output using iterator
+		ArrayList<String> infoList = new ArrayList<String>(); // Create object of list
+		infoList.add("Hello"); // Add "Hello"
+		infoList.add("World"); // Add "World"
+		infoList.add("Keval"); // Add "Keval"
+		Iterator<String> iterate = infoList.iterator(); // Print output using iterator
 		System.out.println(iterate.next()); // Print "Hello"
 		System.out.println(iterate.next()); // Print "World"
 		System.out.println(iterate.next()); // Print "Keval"

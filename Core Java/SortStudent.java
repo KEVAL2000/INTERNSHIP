@@ -41,7 +41,6 @@ public class SortStudent {
 		// Sorted by mark of student, as provide by MarkComparator
 		System.out.println("Sorting list by mark");
 		System.out.println(studentList);
-
 	}
 
 }

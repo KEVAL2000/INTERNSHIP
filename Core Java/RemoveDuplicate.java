@@ -12,21 +12,21 @@ import java.util.HashSet;
 public class RemoveDuplicate {
 
 	public static void main (String[] args) {
-		ArrayList<String> list = new ArrayList<String>(); // Create object of list
-		list.add("A"); // Add "A"
-		list.add("B");
-		list.add("C");
-		list.add("D");
-		list.add("A");
-		list.add("C");
-		list.add("E");
-		list.add("E");
-		list.add("E");
-		System.out.println("Before delete duplicate value, list is :");
-		System.out.println(list);
+		ArrayList<String> alphabetList = new ArrayList<String>(); // Create object of alphabet list
+		alphabetList.add("A"); // Add "A"
+		alphabetList.add("B");
+		alphabetList.add("C");
+		alphabetList.add("D");
+		alphabetList.add("A");
+		alphabetList.add("C");
+		alphabetList.add("E");
+		alphabetList.add("E");
+		alphabetList.add("E");
+		System.out.println("Before delete duplicate value, alphabet list is :");
+		System.out.println(alphabetList);
 
-		HashSet<String> removeDuplicate = new HashSet<String>(list); // Delete duplicate value in list
-		System.out.println("After delete duplicate value, list is :");
+		HashSet<String> removeDuplicate = new HashSet<String>(alphabetList); // Delete duplicate value in alphabet list
+		System.out.println("After delete duplicate value, alphabet list is :");
 		System.out.println(removeDuplicate);
 	}
 

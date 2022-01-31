@@ -9,6 +9,7 @@ import java.util.Collections;
 * @version 1.0 2022-01-31
 */
 class StudentData implements Comparable<StudentData> {
+
 	int id;
 	String name;
 	int birthYear;

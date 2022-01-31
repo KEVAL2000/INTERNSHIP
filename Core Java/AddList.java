@@ -15,6 +15,7 @@ public class AddList {
 		infoList.add("Hello"); // Add "Hello"
 		infoList.add("World"); // Add "World"
 		infoList.add("Keval"); // Add "Keval"
+
 		Iterator<String> iterate = infoList.iterator(); // Print output using iterator
 		System.out.println(iterate.next()); // Print "Hello"
 		System.out.println(iterate.next()); // Print "World"

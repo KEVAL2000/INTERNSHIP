@@ -10,12 +10,12 @@ import java.util.HashSet;
 public class HashSetExample {
 
 	public static void main (String[] args) {
-		HashSet<String> list = new HashSet<String>(); // Create hashset of language
-		list.add("Java"); // Add "Java"
-		list.add("JSP"); // Add "JSP"
-		list.add("Servlet"); // Add "Servlet"
-		list.add("Java"); // Add duplicate name 
-		System.out.println(list); // Print list as [Java, JSP, Servlet]
+		HashSet<String> progLanguage = new HashSet<String>(); // Create hashset of language
+		progLanguage.add("Java"); // Add "Java"
+		progLanguage.add("JSP"); // Add "JSP"
+		progLanguage.add("Servlet"); // Add "Servlet"
+		progLanguage.add("Java"); // Add duplicate name 
+		System.out.println(progLanguage); // Print list as [Java, JSP, Servlet]
 	}
 
 }

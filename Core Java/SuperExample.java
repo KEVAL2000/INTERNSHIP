@@ -14,10 +14,11 @@ class ExampleNew {
 }
 
 class ChildExample extends ExampleNew {
-	
+
 	void printName () {
 		System.out.println("The name is keval parmar");
 	}
+
 	void print () {
 		super.printName();
 	}

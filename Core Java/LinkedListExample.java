@@ -35,63 +35,63 @@ public class LinkedListExample {
 
 		switch (choose) { // Use switch case for choose method 
 			case 1:
-				addMethod ();
+				addMethod();
 				break;
 
 			case 2:
-				addFirstMethod ();
+				addFirstMethod();
 				break;
 
 			case 3:
-				addLastMethod ();
+				addLastMethod();
 				break;
 
 			case 4:
-				removeMethod ();
+				removeMethod();
 				break;
 
 			case 5:
-				removeFirstMethod ();
+				removeFirstMethod();
 				break;
 
 			case 6:
-				removeLastMethod ();
+				removeLastMethod();
 				break;
 
 			case 7:
-				removeFirstOccurrenceMethod ();
+				removeFirstOccurrenceMethod();
 				break;
 
 			case 8:
-				removeLastOccurrenceMethod ();
+				removeLastOccurrenceMethod();
 				break;
 
 			case 9:
-				getMethod ();
+				getMethod();
 				break;
 
 			case 10:
-				setMethod ();
+				setMethod();
 				break;
 
 			case 11:
-				clearMethod ();
+				clearMethod();
 				break;
 
 			case 12:
-				sizeMethod ();
+				sizeMethod();
 				break;
 
 			case 13:
-				sortMethod ();
+				sortMethod();
 				break;
 
 			case 14:
-				displayMethod ();
+				displayMethod();
 				break;
 
 			default:
-				continueMethod ();
+				continueMethod();
 				break;
 		}
 	}
@@ -103,7 +103,7 @@ public class LinkedListExample {
 		nameList.add(addNew); // Use add() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -114,7 +114,7 @@ public class LinkedListExample {
 		nameList.addFirst(addNew); // Use addFirst() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -125,7 +125,7 @@ public class LinkedListExample {
 		nameList.addLast(addNew); // Use addLast() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -136,7 +136,7 @@ public class LinkedListExample {
 		nameList.remove(index - 1); // Use remove() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -145,7 +145,7 @@ public class LinkedListExample {
 		nameList.removeFirst(); // Use removeFirst() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -154,7 +154,7 @@ public class LinkedListExample {
 		nameList.removeLast(); // Use removeLast() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -165,7 +165,7 @@ public class LinkedListExample {
 		nameList.removeFirstOccurrence(addNew); // Use removeFirstOccurrence() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -176,7 +176,7 @@ public class LinkedListExample {
 		nameList.removeLastOccurrence(addNew); // Use removeLastOccurrence() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -187,7 +187,7 @@ public class LinkedListExample {
 		}
 		count++;
 		if (count == 1) {
-			continueMethod ();
+			continueMethod();
 		}
 	}
 
@@ -204,7 +204,7 @@ public class LinkedListExample {
 		nameList.set(index - 1, addNew); // Use set() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -213,9 +213,9 @@ public class LinkedListExample {
 		String result = input.next();
 		if (result.equalsIgnoreCase("y")) {
 			nameList.clear(); // Use clear() method
-			displayMethod ();
+			displayMethod();
 		} else {
-			continueMethod ();
+			continueMethod();
 		}
 	}
 
@@ -224,7 +224,7 @@ public class LinkedListExample {
 		System.out.println("Size of the linked list is " + "\"" + nameList.size() + "\""); // Use size() method
 		count++;
 		if (count == 1) {
-			continueMethod ();
+			continueMethod();
 		}
 	}
 
@@ -233,7 +233,7 @@ public class LinkedListExample {
 		Collections.sort(nameList); // Use sort() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -246,14 +246,14 @@ public class LinkedListExample {
 				System.out.println((i + 1) + "." + nameList.get(i)); // Print all element
 			}
 		}
-		continueMethod ();
+		continueMethod();
 	}
 
 	public static void continueMethod () {
 		System.out.println("Do you want to continue ? (y / n)");
 		String result = input.next();
 		if (result.equalsIgnoreCase("y")) { // Check if yes(y or Y) or no(n or N)
-			allMethod ();
+			allMethod();
 		} else {
 			System.exit(0);
 		}
@@ -267,7 +267,7 @@ public class LinkedListExample {
 		for (int i = 0; i < number; i++) {
 			nameList.add(input.next());
 		}
-		allMethod ();
+		allMethod();
 	}
 
 }

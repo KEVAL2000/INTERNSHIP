@@ -10,11 +10,11 @@ import java.util.HashMap;
 public class HashMapExample {
 
 	public static void main (String[] args) {
-		HashMap<String, Integer> list = new HashMap<String, Integer>(); // Create hashmap of name and roll number
-		list.put("Keval", 55); // Add name "Keval" and roll number "55"
-		list.put("Harsh", 20);
-		list.put("Mitul", 37);
-		System.out.println(list); // Print list as {name = roll number}
+		HashMap<String, Integer> studentDetail = new HashMap<String, Integer>(); // Create hashmap of name and roll number
+		studentDetail.put("Keval", 55); // Add name "Keval" and roll number "55"
+		studentDetail.put("Harsh", 20);
+		studentDetail.put("Mitul", 37);
+		System.out.println(studentDetail); // Print list as {name = roll number}
 	}
 
 }

@@ -29,39 +29,39 @@ public class ArrayListExample {
 
 		switch (choose) { // Use switch case for choose method 
 			case 1:
-				addMethod ();
+				addMethod();
 				break;
 
 			case 2:
-				getMethod ();
+				getMethod();
 				break;
 
 			case 3:
-				setMethod ();
+				setMethod();
 				break;
 
 			case 4:
-				removeMethod ();
+				removeMethod();
 				break;
 
 			case 5:
-				clearMethod ();
+				clearMethod();
 				break;
 
 			case 6:
-				sizeMethod ();
+				sizeMethod();
 				break;
 
 			case 7:
-				sortMethod ();
+				sortMethod();
 				break;
 
 			case 8:
-				displayMethod ();
+				displayMethod();
 				break;
 				
 			default:
-				continueMethod ();
+				continueMethod();
 		}
 	}
 
@@ -72,7 +72,7 @@ public class ArrayListExample {
 		nameList.add(addNew); // Use add() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -83,7 +83,7 @@ public class ArrayListExample {
 		}
 		count++;
 		if (count == 1) {
-			continueMethod ();
+			continueMethod();
 		}
 	}
 
@@ -100,7 +100,7 @@ public class ArrayListExample {
 		nameList.set(index - 1, addNew); // Use set() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -111,7 +111,7 @@ public class ArrayListExample {
 		nameList.remove(index - 1); // Use remove() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -120,9 +120,9 @@ public class ArrayListExample {
 		String result = input.next();
 		if (result.equalsIgnoreCase("y")) {
 			nameList.clear(); // Use clear() method
-			displayMethod ();
+			displayMethod();
 		} else {
-			continueMethod ();
+			continueMethod();
 		}
 	}
 
@@ -131,7 +131,7 @@ public class ArrayListExample {
 		System.out.println("Size of the array list is " + "\"" + nameList.size() + "\""); // Use size() method
 		count++;
 		if (count == 1) {
-			continueMethod ();
+			continueMethod();
 		}
 	}
 
@@ -140,7 +140,7 @@ public class ArrayListExample {
 		Collections.sort(nameList); // Use sort() method
 		count++;
 		if (count == 1) {
-			displayMethod ();
+			displayMethod();
 		}
 	}
 
@@ -153,14 +153,14 @@ public class ArrayListExample {
 				System.out.println((i + 1) + "." + nameList.get(i)); // Print all element
 			}
 		}
-		continueMethod ();
+		continueMethod();
 	}
 
 	public static void continueMethod () { // Create method to prompt user to ask "Do you want to continue ? (y / n)"
 		System.out.println("Do you want to continue ? (y / n)");
 		String result = input.next();
 		if (result.equalsIgnoreCase("y")) { // Check if yes(y or Y) or no(n or N)
-			allMethod ();
+			allMethod();
 		} else {
 			System.exit(0);
 		}
@@ -174,7 +174,7 @@ public class ArrayListExample {
 		for (int i = 0; i < number; i++) {
 			nameList.add(input.next());
 		}
-		allMethod ();
+		allMethod();
 	}
 
 }

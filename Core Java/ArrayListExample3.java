@@ -55,6 +55,7 @@ public class ArrayListExample3 {
 			System.out.println(student.getId() + "    " + student.getName() + "    " + student.getSem());
 		}
 		System.out.println("------------------------");
+
 		ArrayList<Student> studentDataNew = new ArrayList<>(); // Create second array list
 		studentDataNew.add(new Student(104, "Raj", 6));
 		studentDataNew.add(new Student(105, "Montu", 7));

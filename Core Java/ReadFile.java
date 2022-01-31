@@ -10,17 +10,19 @@ import java.io.IOException;
 */
 public class ReadFile {
 
-	public static void main (String[] args) {
+	public static void main (String[] args) throws IOException {
+		FileReader newFile = null;
 		try {
-			FileReader file = new FileReader("D:\\myTestFile.txt");
+			newFile = new FileReader("D:\\myTestFile.txt");
 			int i;
-			while ((i = file.read()) != -1) {
+			while ((i = newFile.read()) != -1) {
 				System.out.print((char) i);
 			}
-			file.close();
-		} catch (IOException e) {
+		} catch (IOException exception) {
 			System.out.println("Something went wrong");
-			e.printStackTrace(); // Print exception if any
+			exception.printStackTrace(); // Print exception if any
+		} finally {
+			newFile.close();
 		}
 	}
 

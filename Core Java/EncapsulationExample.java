@@ -34,7 +34,7 @@ class EncapsulationExample {
 		Encapsulation myObject = new Encapsulation();
 		myObject.setName("Keval"); // Call setter method
 		myObject.setBranch("IT"); // Call setter method
-		System.out.println("Name is "myObject.getName() + " and Branch is " + myObject.getBranch()); // Call getter method
+		System.out.println("Name is " + myObject.getName() + " and Branch is " + myObject.getBranch()); // Call getter method
 	}
 
 }

@@ -12,17 +12,17 @@ import java.io.IOException;
 public class CreateFile {
 
 	public static void main (String[] args) {
-		File file = new File("D:\\myTestFile.txt"); // Create file object
+		File newFile = new File("D:\\myTestFile.txt"); // Create newFile object of File class
 		boolean result;
 		try {
-			result = file.createNewFile(); // Create a new file
+			result = newFile.createNewFile(); // Create a new file
 			if (result) { // Test condition
-				System.out.println("File created at Location : " + "\" " + file.getCanonicalPath() + " \""); // Return path
+				System.out.println("File created at Location : " + "\" " + newFile.getCanonicalPath() + " \""); // Return path
 			} else {
-				System.out.println("File already exists! at Location : " + "\" " + file.getCanonicalPath() + " \""); // Return path
+				System.out.println("File already exist at Location : " + "\" " + newFile.getCanonicalPath() + " \""); // Return path
 			}
-		} catch (IOException e) {
-			e.printStackTrace(); // Print exception if any
+		} catch (IOException exception) {
+			exception.printStackTrace(); // Print exception if any
 		}
 	}
 

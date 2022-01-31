@@ -12,19 +12,19 @@ import java.io.IOException;
 public class AddFile {
 
 	public static void main (String[] args) throws IOException {
-		FileWriter file = null;
+		FileWriter newFile = null;
 		try {
-			file = new FileWriter("D:\\myTestFile.txt");
-			file.write("First Name : Keval"); // Add detail into file
-			file.write("\nMiddle Name : Ashwinbhai");
-			file.write("\nLast Name : Parmar");
-			file.write("\nEnrollment Number : 180160116055");
+			newFile = new FileWriter("D:\\myTestFile.txt");
+			newFile.write("First Name : Keval"); // Add detail into file
+			newFile.write("\nMiddle Name : Ashwinbhai");
+			newFile.write("\nLast Name : Parmar");
+			newFile.write("\nEnrollment Number : 180160116055");
 			System.out.println("Details are added successfully!");
-		} catch (IOException e) {
+		} catch (IOException exception) {
 			System.out.println("Something went wrong");
-			e.printStackTrace(); // Print exception if any
+			exception.printStackTrace(); // Print exception if any
 		} finally {
-			file.close(); // Close file
+			newFile.close(); // Close file
 		}
 	}
 

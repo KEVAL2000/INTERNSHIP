@@ -7,23 +7,23 @@ use company;
 -- Create a job table
 CREATE TABLE job (
     id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(30) NOT NULL,
-    min_salary DECIMAL(20 , 2 ) NULL,
-    max_salary DECIMAL(20 , 2 ) NULL,
+    name VARCHAR(20) NOT NULL,
+    min_salary DECIMAL(7 , 2 ) NULL,
+    max_salary DECIMAL(7 , 2 ) NULL,
     PRIMARY KEY (id)
-); 
+);
 
 -- Create a country table
 CREATE TABLE country (
     id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(30) NOT NULL,
+    name VARCHAR(20) NOT NULL,
     PRIMARY KEY (id)
 );
 
 -- Create a department table
 CREATE TABLE department (
     id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(30) NOT NULL,
+    name VARCHAR(20) NOT NULL,
     fk_country_id INT NOT NULL,
     FOREIGN KEY (fk_country_id)
         REFERENCES country (id)
@@ -34,10 +34,10 @@ CREATE TABLE department (
 -- Create an employee table
 CREATE TABLE employee (
     id INT NOT NULL AUTO_INCREMENT,
-    first_name VARCHAR(30) NOT NULL,
-    last_name VARCHAR(30) NOT NULL,
+    first_name VARCHAR(20) NOT NULL,
+    last_name VARCHAR(20) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    salary DECIMAL(20 , 2 ) NULL,
+    salary DECIMAL(7 , 2 ) NULL,
     fk_department_id INT NOT NULL,
     FOREIGN KEY (fk_department_id)
         REFERENCES department (id)
@@ -88,14 +88,27 @@ insert into employee(id, first_name, last_name, email, salary, fk_department_id,
 insert into employee(id, first_name, last_name, email, salary, fk_department_id, fk_job_id) values(110, 'Ajay', 'Prajapati', 'ajayprajapati@gmail.com', 29000.00, 5, 10);
 
 -- Display all table data
-select * from job;
-select * from country;
-select * from department;
-select * from employee;
+SELECT 
+    *
+FROM
+    job;
+SELECT 
+    *
+FROM
+    country;
+SELECT 
+    *
+FROM
+    department;
+SELECT 
+    *
+FROM
+    employee;
 
 -- Get first name and lastname as full name and department name and country name and job name
 SELECT 
-    e.id, CONCAT(e.first_name, ' ', e.last_name) AS 'full_name',
+    e.id,
+    CONCAT(e.first_name, ' ', e.last_name) AS 'full_name',
     d.name AS 'department_name',
     c.name AS 'country_name',
     j.name AS 'job_name'
@@ -105,7 +118,7 @@ FROM
     department AS d ON d.id = e.fk_department_id
         LEFT JOIN
     job AS j ON j.id = e.fk_job_id
-		LEFT JOIN
+        LEFT JOIN
     country AS c ON c.id = d.fk_country_id
 GROUP BY e.id;
 

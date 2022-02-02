@@ -7,7 +7,7 @@ use employee;
 -- Create a hobby table
 CREATE TABLE hobby (
     id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(50) NOT NULL,
+    name VARCHAR(30) NOT NULL,
     PRIMARY KEY (id)
 );
 
@@ -17,7 +17,7 @@ CREATE TABLE employee (
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     age TINYINT NULL,
-    mobile_number VARCHAR(20) NULL,
+    mobile_number VARCHAR(12) NULL,
     address VARCHAR(70) NULL,
     PRIMARY KEY (id)
 );
@@ -25,7 +25,7 @@ CREATE TABLE employee (
 -- Create an employee_salary table
 CREATE TABLE employee_salary (
     id INT NOT NULL AUTO_INCREMENT,
-    salary DECIMAL(8 , 2 ) NULL,
+    salary DECIMAL(7 , 2 ) NULL,
     date DATE NULL,
     fk_employee_id INT NOT NULL,
     FOREIGN KEY (fk_employee_id)
@@ -132,10 +132,22 @@ describe employee;
 describe hobby;
 
 -- Display all table
-select * from employee_hobby;
-select * from employee_salary;
-select * from employee;
-select * from hobby;
+SELECT 
+    *
+FROM
+    employee_hobby;
+SELECT 
+    *
+FROM
+    employee_salary;
+SELECT 
+    *
+FROM
+    employee;
+SELECT 
+    *
+FROM
+    hobby;
 
 -- Delete record of employee 105 from all table 
 DELETE employee , employee_salary , employee_hobby FROM employee,
@@ -155,7 +167,7 @@ SET
 WHERE
     employee.id = 104;
   
--- After delete, display all table
+-- Display all table after delete
 SELECT 
     *
 FROM
@@ -182,19 +194,7 @@ truncate table employee;
 truncate table hobby;
 set foreign_key_checks = 1;
 
--- Get employee id and first_name and last_name and salary and date
-SELECT 
-    e.id,
-    CONCAT(e.first_name, ' ', e.last_name) AS 'full_name',
-    es.salary,
-    es.date
-FROM
-    employee_salary AS es
-        RIGHT JOIN
-    employee AS e ON es.fk_employee_id = e.id
-ORDER BY e.id; 
-
--- Get employee name and employee hobby in single column
+-- Select query to get all employee name and hobby name in single column
 SELECT 
     e.id,
     CONCAT(e.first_name, ' ', e.last_name) AS 'full_name',
@@ -207,7 +207,7 @@ WHERE
     e.id = eh.fk_employee_id
         AND eh.fk_hobby_id = h.id;
 
--- Get employee name and salary datewise 
+-- Select query to get employee name and his/her salary 
 SELECT 
     e.id,
     CONCAT(e.first_name, ' ', e.last_name) AS 'full_name',
@@ -219,7 +219,7 @@ FROM
 WHERE
     es.fk_employee_id = e.id;
 
--- Separate select query to get employee name and total salary and hobby in comma separated
+-- Select query to get employee name and total salary of employee and hobby name (comma-separated)
 SELECT 
     e.id,
     CONCAT(e.first_name, ' ', e.last_name) AS 'full_name',

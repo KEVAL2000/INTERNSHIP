@@ -6,17 +6,17 @@ use employee;
 
 -- Create a hobby table
 CREATE TABLE hobby (
-    id INT(20) NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(50) NOT NULL,
     PRIMARY KEY (id)
 );
 
 -- Create an employee table
 CREATE TABLE employee (
-    id INT(20) NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL AUTO_INCREMENT,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
-    age TINYINT(20) NULL,
+    age TINYINT NULL,
     mobile_number VARCHAR(20) NULL,
     address VARCHAR(70) NULL,
     PRIMARY KEY (id)
@@ -24,10 +24,10 @@ CREATE TABLE employee (
 
 -- Create an employee_salary table
 CREATE TABLE employee_salary (
-    id INT(20) NOT NULL AUTO_INCREMENT,
+    id INT NOT NULL AUTO_INCREMENT,
     salary DECIMAL(8 , 2 ) NULL,
     date DATE NULL,
-    fk_employee_id INT(20) NOT NULL,
+    fk_employee_id INT NOT NULL,
     FOREIGN KEY (fk_employee_id)
         REFERENCES employee (id)
         ON DELETE CASCADE,
@@ -36,12 +36,12 @@ CREATE TABLE employee_salary (
 
 -- Create an employee_hobby table
 CREATE TABLE employee_hobby (
-    id INT(20) NOT NULL AUTO_INCREMENT,
-    fk_employee_id INT(20) NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
+    fk_employee_id INT NOT NULL,
     FOREIGN KEY (fk_employee_id)
         REFERENCES employee (id)
         ON DELETE CASCADE,
-    fk_hobby_id INT(20) NOT NULL,
+    fk_hobby_id INT NOT NULL,
     FOREIGN KEY (fk_hobby_id)
         REFERENCES hobby (id)
         ON DELETE CASCADE,

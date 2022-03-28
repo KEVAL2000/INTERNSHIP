@@ -1,0 +1,57 @@
+<?page title="Home" contentType="text/html;charset=UTF-8"?>
+<?link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"?>
+<zk>
+	<window title="Home" border="normal" apply="com.java.customercrud.controller.CustomerHomeController" hflex="min" vflex="min">
+		<custom-attributes org.zkoss.zul.image.preload="true" />
+		<button id="createCustomer" iconSclass="z-icon-user-plus" />
+		<listbox id="customerListBox" sclass="z-sticky-header" rows="8" sizedByContent="true" span="true">
+			<listhead sizable="true" >
+				<listheader sort="auto" align="center" label="#" />
+				<listheader align="center" label="Full Name" />
+				<listheader align="center" label="Date Of Birth" />
+				<listheader align="center" label="Mobile Number" />
+				<listheader align="center" label="Address" />
+				<listheader align="center" label="Age" />
+				<listheader align="center" label="Gender" />
+				<listheader align="center" label="Email" />
+				<listheader align="center" label="Actions" />
+			</listhead>
+			<template name="model">
+				<listitem value="${each}" >
+					<listcell>
+						<label value="${forEachStatus.index + 1}" />
+					</listcell>
+					<listcell>
+						<label value="${each.firstName}" />
+						<span></span>
+						<label value="${each.lastName}" />
+					</listcell>
+					<listcell>
+						<label value="${each.dateOfBirth}" />
+					</listcell>
+					<listcell>
+						<label value="${each.mobileNumber}" />
+					</listcell>
+					<listcell>
+						<label value="${each.addressOne}" />
+						<span>,</span>
+						<label value="${each.addressTwo}" />
+					</listcell>
+					<listcell>
+						<label value="${each.age}" />
+					</listcell>
+					<listcell>
+						<label value="${each.gender}" />
+					</listcell>
+					<listcell>
+						<label value="${each.email}" />
+					</listcell>
+					<listcell>
+						<button forward="onClick=customerListBox.onUpdateCustomer(${each})" iconSclass="z-icon-fw z-icon-pencil-square-o" />
+						<button forward="onClick=customerListBox.onDeleteCustomer(${each})" iconSclass="z-icon-fw z-icon-trash" />
+					</listcell>
+				</listitem>
+			</template>
+		</listbox>
+	</window>
+</zk>

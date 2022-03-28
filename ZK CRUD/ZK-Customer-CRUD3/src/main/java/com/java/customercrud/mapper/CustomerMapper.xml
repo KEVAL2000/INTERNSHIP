@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.java.customercrud.mapper.CustomerMapper">
+
+	<resultMap type="customer" id="result">
+		<id property="id" column="id" />
+		<result property="firstName" column="first_name" />
+		<result property="lastName" column="last_name" />
+		<result property="dateOfBirth" column="date_of_birth" />
+		<result property="mobileNumber" column="mobile_number" />
+		<result property="addressOne" column="address_one" />
+		<result property="addressTwo" column="address_two" />
+		<result property="age" column="age" />
+		<result property="gender" column="gender" />
+		<result property="email" column="email" />
+	</resultMap>
+
+	<select id="viewCustomer" resultType="customer" resultMap="result">
+		SELECT * FROM customer
+	</select>
+
+	<insert id="insertCustomer" parameterType="customer" keyProperty="id" useGeneratedKeys="true">
+		INSERT INTO customer (first_name, last_name, date_of_birth, mobile_number, address_one, address_two, age, gender, email)
+		VALUES (#{firstName}, #{lastName}, #{dateOfBirth}, #{mobileNumber}, #{addressOne}, #{addressTwo}, #{age}, #{gender}, #{email})
+	</insert>
+
+	<update id="updateCustomer" parameterType="customer">
+		UPDATE customer
+		SET first_name = #{firstName}, last_name = #{lastName}, date_of_birth = #{dateOfBirth}, mobile_number = #{mobileNumber}, address_one = #{addressOne}, address_two = #{addressTwo}, age = #{age}, gender = #{gender}, email = #{email}
+		WHERE id = #{id}
+	</update>
+
+	<delete id="deleteCustomerById" parameterType="long">
+		DELETE FROM customer
+		WHERE id = #{id}
+	</delete>
+
+	<select id="findCustomerById" parameterType="long" resultType="customer" resultMap="result">
+		SELECT * FROM customer
+		WHERE id = #{id} ORDER BY id DESC
+	</select>
+
+</mapper>
